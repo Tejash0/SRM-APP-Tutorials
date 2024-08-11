@@ -15,8 +15,8 @@ public class One {
         Car c = new Car();
         Car c1 = c;
         c.CarInfo(2014, "XUV700", "RED");
-        System.out.println(c.model);
-        System.out.println(c1.year);
-        System.out.println(c1.color);
+        System.out.println("Model: " + c.model);
+        System.out.println("Year: " + c1.year);
+        System.out.println("Color: " + c1.color);
     }
 }
