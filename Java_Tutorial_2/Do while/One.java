@@ -1,3 +1,5 @@
+//Name:- Kumar Tejash
+//Reg.no:- 2311003011446
 import java.util.Scanner;
 
 public class One

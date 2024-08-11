@@ -8,6 +8,7 @@ class One
         int a = scn.nextInt();
         int b = scn.nextInt();
         sum(a,b);
+        scn.close();
     }
 
     static void sum(int x,int y)

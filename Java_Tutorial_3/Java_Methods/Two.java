@@ -6,11 +6,22 @@ class Two
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter Two Numbers");
         String a = scn.nextLine();
-        Check(a);
+        int b;
+        b = Check(a);
+        scn.close();
     }
 
-    static void Check(String x)
+    static int Check(String x)
     {
-        System.out.println(x);
+        int a = x.length();
+        if(a >= 8)
+        {
+            if(x[0]>64 || x[0] < 91)
+            {
+                return 1;
+            }
+        }
+        else
+        return 0;
     }
 }
