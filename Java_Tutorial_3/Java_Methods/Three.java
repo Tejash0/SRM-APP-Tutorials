@@ -1,40 +1,37 @@
-
-//Name:- Kumar Tejash
-//Reg.no:- 2311003011446
 import java.util.Scanner;
 
 public class Three {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a Word");
-        String a = scn.nextLine();
+        String a = scanner.nextLine();
         int b = checkforvowel(a);
         if (b == 1) {
-            System.out.println("False: Not all Vowels");
+            System.out.println("Not all Vowels");
         } else {
-            System.out.println("True: All Vowels");
+            System.out.println("All Vowels");
         }
-        scn.close();
+        scanner.close();
     }
 
-    static int checkforvowel(String x) {
+    static int checkforvowel(String a) {
         int[] count = new int[5];
 
-        for (int i = 0; i < x.length(); i++) {
+        for (int i = 0; i < a.length(); i++) {
 
-            if (x.charAt(i) == 'A' || x.charAt(i) == 'a')
+            if (a.charAt(i) == 'A' || a.charAt(i) == 'a')
                 count[0] = 1;
 
-            else if (x.charAt(i) == 'E' || x.charAt(i) == 'e')
+            else if (a.charAt(i) == 'E' || a.charAt(i) == 'e')
                 count[1] = 1;
 
-            else if (x.charAt(i) == 'I' || x.charAt(i) == 'i')
+            else if (a.charAt(i) == 'I' || a.charAt(i) == 'i')
                 count[2] = 1;
 
-            else if (x.charAt(i) == 'O' || x.charAt(i) == 'o')
+            else if (a.charAt(i) == 'O' || a.charAt(i) == 'o')
                 count[3] = 1;
 
-            else if (x.charAt(i) == 'U' || x.charAt(i) == 'u')
+            else if (a.charAt(i) == 'U' || a.charAt(i) == 'u')
                 count[4] = 1;
         }
 

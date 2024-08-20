@@ -1,13 +1,10 @@
-
-//Name:- Kumar Tejash
-//Reg.no:- 2311003011446
 import java.util.Scanner;
 
 public class Four {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a Number");
-        int a = scn.nextInt();
+        int a = scanner.nextInt();
         int b = isprime(a);
         if (b == 0) {
             System.out.println("Is Prime");
@@ -20,7 +17,7 @@ public class Four {
                 System.out.print(i + " ");
             }
         }
-        scn.close();
+        scanner.close();
     }
 
     static int isprime(int x) {

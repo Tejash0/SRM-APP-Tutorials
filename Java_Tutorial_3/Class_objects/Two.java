@@ -18,9 +18,9 @@ class Rectangle {
 
 public class Two {
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle();
-        r1.set(10, 44);
-        r1.perimeter();
-        r1.area();
+        Rectangle r = new Rectangle();
+        r.set(10, 44);
+        r.perimeter();
+        r.area();
     }
 }

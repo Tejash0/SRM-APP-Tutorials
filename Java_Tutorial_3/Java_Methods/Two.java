@@ -1,21 +1,18 @@
-
-//Name:- Kumar Tejash
-//Reg.no:- 2311003011446
 import java.util.Scanner;
 
 class Two {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a Password");
-        String a = scn.nextLine();
-        int b;
-        b = Check(a);
-        if (b == 1) {
+        String a = scanner.nextLine();
+        int ret;
+        ret = Check(a);
+        if (ret == 1) {
             System.out.println("Vaild Password");
         } else {
             System.out.println("Invalid Password");
         }
-        scn.close();
+        scanner.close();
     }
 
     static int Check(String x) {

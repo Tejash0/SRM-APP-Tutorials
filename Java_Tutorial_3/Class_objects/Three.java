@@ -11,16 +11,16 @@ class Bank_Account {
         Balance = 0;
     }
 
-    public void deposit(Scanner sn) {
+    public void deposit(Scanner scan) {
         System.out.println("Enter the amount to deposit: ");
-        float dep = sn.nextFloat();
+        float dep = scan.nextFloat();
         Balance += dep;
         System.out.println("The Final Balance is: " + Balance);
     }
 
-    public void withdraw(Scanner sn) {
+    public void withdraw(Scanner scan) {
         System.out.println("Enter The Amount to Withdraw: ");
-        float wit = sn.nextFloat();
+        float wit = scan.nextFloat();
 
         if (wit <= Balance) {
             Balance -= wit;
@@ -36,12 +36,12 @@ class Bank_Account {
 
 public class Three {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Account_Number: ");
-        long n = scn.nextLong();
-        String na = scn.nextLine();
+        long n = scanner.nextLong();
+        String na = scanner.nextLine();
         System.out.println("Enter Holder_Name: ");
-        na = scn.nextLine();
+        na = scanner.nextLine();
 
         Bank_Account b1 = new Bank_Account();
         b1.set(n, na);
@@ -53,12 +53,12 @@ public class Three {
             System.out.println("3. Exit");
             System.out.println("Enter your Choice");
 
-            a = scn.nextInt();
+            a = scanner.nextInt();
 
             if (a == 1) {
-                b1.deposit(scn);
+                b1.deposit(scanner);
             } else if (a == 2) {
-                b1.withdraw(scn);
+                b1.withdraw(scanner);
             } else if (a == 3) {
                 System.out.println(" Thank you ");
                 break;
@@ -67,6 +67,6 @@ public class Three {
             }
         }
 
-        scn.close();
+        scanner.close();
     }
 }

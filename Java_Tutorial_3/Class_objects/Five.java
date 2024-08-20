@@ -71,7 +71,7 @@ class ShoppingCart {
 
 public class Five {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         ShoppingCart cart = new ShoppingCart();
 
         while (true) {
@@ -81,23 +81,23 @@ public class Five {
             System.out.println("3. Calculate total");
             System.out.println("4. Display cart");
             System.out.println("5. Exit");
-            int choice = scn.nextInt();
-            scn.nextLine(); // Consume newline
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
 
             if (choice == 1) {
                 System.out.println("Enter product name:");
-                String name = scn.nextLine();
+                String name = scanner.nextLine();
                 System.out.println("Enter product price:");
-                double price = scn.nextDouble();
+                double price = scanner.nextDouble();
                 System.out.println("Enter product quantity:");
-                int quantity = scn.nextInt();
+                int quantity = scanner.nextInt();
 
                 Product product = new Product(name, price, quantity);
                 cart.addProduct(product);
 
             } else if (choice == 2) {
                 System.out.println("Enter product name to remove:");
-                String name = scn.nextLine();
+                String name = scanner.nextLine();
 
                 Product productToRemove = null;
                 for (Product product : cart.items) {
@@ -129,6 +129,6 @@ public class Five {
             }
         }
 
-        scn.close();
+        scanner.close();
     }
 }

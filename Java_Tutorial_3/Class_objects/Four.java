@@ -37,16 +37,16 @@ class Student {
 
 public class Four {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        String n = scn.nextLine();
-        int r = scn.nextInt();
-        int m = scn.nextInt();
+        String n = scanner.nextLine();
+        int r = scanner.nextInt();
+        int m = scanner.nextInt();
 
         Student s1 = new Student(n, r, m);
 
         s1.calgrade();
         s1.displayStudentInfo();
-        scn.close();
+        scanner.close();
     }
 }
