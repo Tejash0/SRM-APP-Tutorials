@@ -11,6 +11,14 @@ class BankAccount {
         this.balance = 0.0;
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
     public void deposit(double amount) {
         balance += amount;
     }
@@ -37,8 +45,8 @@ class SavingsAccount extends BankAccount {
     }
 
     public void applyInterest() {
-        double interest = balance * interestRate;
-        balance += interest;
+        double interest = getBalance() * interestRate;
+        deposit(interest);
     }
 }
 
@@ -59,6 +67,7 @@ public class Nine {
         if (response.equalsIgnoreCase("yes")) {
             System.out.print("Enter interest rate (e.g. 0.05 for 5%): ");
             double interestRate = scanner.nextDouble();
+            scanner.nextLine(); // Consume newline left-over
             account = new SavingsAccount(accountNumber, accountHolder, interestRate);
         } else {
             account = new BankAccount(accountNumber, accountHolder);
@@ -75,16 +84,19 @@ public class Nine {
 
             System.out.print("Choose an option: ");
             int option = scanner.nextInt();
+            scanner.nextLine(); // Consume newline left-over
 
             switch (option) {
                 case 1:
                     System.out.print("Enter amount to deposit: ");
                     double depositAmount = scanner.nextDouble();
+                    scanner.nextLine(); // Consume newline left-over
                     account.deposit(depositAmount);
                     break;
                 case 2:
                     System.out.print("Enter amount to withdraw: ");
                     double withdrawAmount = scanner.nextDouble();
+                    scanner.nextLine(); // Consume newline left-over
                     account.withdraw(withdrawAmount);
                     break;
                 case 3:
@@ -99,11 +111,11 @@ public class Nine {
                     break;
                 case 5:
                     System.out.println("Goodbye!");
+                    scanner.close(); // Close the scanner
                     return;
                 default:
                     System.out.println("Invalid option. Please choose again.");
             }
-            scanner.close();
         }
     }
 }
