@@ -46,9 +46,6 @@ class Restaurant {
     }
 
     public double calculateAverageRating() {
-        if (menuItems.isEmpty()) {
-            return 0.0; // or throw an exception if you prefer
-        }
         double sum = 0;
         for (MenuItem menuItem : menuItems) {
             sum += menuItem.getRating();
@@ -57,10 +54,6 @@ class Restaurant {
     }
 
     public void printMenu() {
-        if (menuItems.isEmpty()) {
-            System.out.println("No menu items available.");
-            return;
-        }
         for (MenuItem menuItem : menuItems) {
             System.out.println("Name: " + menuItem.getName() + ", Price: " + menuItem.getPrice() + ", Rating: "
                     + menuItem.getRating());
@@ -82,22 +75,20 @@ public class Eight {
 
             System.out.print("Choose an option: ");
             int option = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline left-over
 
             switch (option) {
                 case 1:
                     System.out.print("Enter menu item name: ");
-                    String name = scanner.nextLine();
+                    String name = scanner.next();
                     System.out.print("Enter menu item price: ");
                     double price = scanner.nextDouble();
                     System.out.print("Enter menu item rating: ");
                     double rating = scanner.nextDouble();
-                    scanner.nextLine(); // Consume the newline left-over
                     restaurant.addMenuItem(name, price, rating);
                     break;
                 case 2:
                     System.out.print("Enter menu item name to remove: ");
-                    String removeName = scanner.nextLine();
+                    String removeName = scanner.next();
                     restaurant.removeMenuItem(removeName);
                     break;
                 case 3:
@@ -108,12 +99,12 @@ public class Eight {
                     System.out.println("Average Rating: " + restaurant.calculateAverageRating());
                     break;
                 case 5:
-                    scanner.close(); // Close the scanner when exiting
-                    System.out.println("Exiting...");
-                    return; // Exit the program
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid option. Please choose again.");
             }
+            scanner.close();
         }
     }
 }

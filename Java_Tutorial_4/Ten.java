@@ -1,4 +1,5 @@
-// Pet class
+//Kumar Tejash
+//RA2311003011446
 class Pet {
     private String name;
     private String species;
@@ -33,7 +34,6 @@ class Pet {
     }
 }
 
-// Dog class
 class Dog extends Pet {
     private String favoriteToy;
 
@@ -53,7 +53,6 @@ class Dog extends Pet {
     }
 }
 
-// Bird class
 class Bird extends Pet {
     private double wingSpan;
 
