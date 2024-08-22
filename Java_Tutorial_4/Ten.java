@@ -1,5 +1,3 @@
-//Kumar Tejash
-//RA2311003011446
 class Pet {
     private String name;
     private String species;

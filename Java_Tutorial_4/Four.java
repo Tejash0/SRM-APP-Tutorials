@@ -1,5 +1,3 @@
-//Kumar Tejash
-//RA2311003011446
 class Circle {
     // Attribute of the Circle class
     private double radius;

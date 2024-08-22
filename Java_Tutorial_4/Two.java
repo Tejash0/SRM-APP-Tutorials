@@ -1,5 +1,3 @@
-//Kumar Tejash
-//RA2311003011446
 class Dog {
     String name;
     String breed;

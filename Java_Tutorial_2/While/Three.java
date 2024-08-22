@@ -1,18 +1,14 @@
-//Name:- Kumar Tejash
-//Reg.no:- 2311003011446
 import java.util.Scanner;
-public class Three 
-{
-    public static void main(String[] args) 
-    {
+
+public class Three {
+    public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
         System.out.print("Enter the number : ");
         int a = scn.nextInt();
         int sum = 0;
 
-        while (a != 0) 
-        {
+        while (a != 0) {
             sum += a;
             a--;
         }

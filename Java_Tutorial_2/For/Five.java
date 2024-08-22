@@ -1,10 +1,7 @@
-//Name:- Kumar Tejash
-//Reg.no:- 2311003011446
 import java.util.Scanner;
-public class Five 
-{
-    public static void main(String[] args)
-    {
+
+public class Five {
+    public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
         System.out.println("Enter the Principal : ");
@@ -15,10 +12,10 @@ public class Five
         int time = scn.nextInt();
         float SI;
 
-        SI = (principal * rate * time)/100;
-  
+        SI = (principal * rate * time) / 100;
+
         System.out.println("The simple interest : " + SI);
         scn.close();
     }
-    
+
 }

@@ -1,5 +1,3 @@
-//Kumar Tejash
-//RA2311003011446
 class Rectangle {
     // Attributes of the Rectangle class
     private double width;
