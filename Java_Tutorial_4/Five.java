@@ -1,6 +1,3 @@
-
-//Kumar Tejash
-//RA2311003011446
 import java.util.ArrayList;
 import java.util.Scanner;
 
