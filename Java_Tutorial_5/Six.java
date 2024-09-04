@@ -14,6 +14,6 @@ public class Six {
             nu /= 10;
             count++;
         }
-        System.out.println("Number of digits missing: "10 - count);
+        System.out.println("Number of digits missing: " + (10 - count));
     }
 }
