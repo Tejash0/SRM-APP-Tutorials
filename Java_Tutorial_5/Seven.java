@@ -11,10 +11,7 @@ public class Seven {
     }
 
     static void check(int a, int b) {
-        if (a == b) {
-            if (a - b == 5 || a + b == 5) {
-                System.out.println("True");
-            }
+        if (a == b || a - b == 5 || a + b == 5) {
             System.out.println("True");
         } else {
             System.out.println("False");

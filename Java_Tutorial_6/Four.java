@@ -1,58 +1,14 @@
 import java.util.Scanner;
 
-public class Four {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Welcome to the Employee Management Program!");
-        System.out.println("--------------------------------------------");
-
-        while (true) {
-            System.out.println("Choose an option:");
-            System.out.println("1. Create an Employee");
-            System.out.println("2. Create an HR Manager");
-            System.out.println("3. Quit");
-
-            int choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter the employee's name: ");
-                    String name = scanner.next();
-                    System.out.print("Enter the employee's salary: ");
-                    double salary = scanner.nextDouble();
-                    Employee employee = new Employee(name, salary);
-                    System.out.println("Employee created successfully!");
-                    break;
-                case 2:
-                    System.out.print("Enter the HR Manager's name: ");
-                    String managerName = scanner.next();
-                    System.out.print("Enter the HR Manager's salary: ");
-                    double managerSalary = scanner.nextDouble();
-                    HRManager hrManager = new HRManager(managerName, managerSalary);
-                    System.out.println("HR Manager created successfully!");
-                    break;
-                case 3:
-                    System.out.println("Goodbye!");
-                    return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
-        }
-    }
-}
-
 class Employee {
-    private String name;
     private double salary;
 
-    public Employee(String name, double salary) {
-        this.name = name;
+    public Employee(double salary) {
         this.salary = salary;
     }
 
     public void work() {
-        System.out.println(name + " is working.");
+        System.out.println("Employee is working...");
     }
 
     public double getSalary() {
@@ -60,21 +16,49 @@ class Employee {
     }
 }
 
+// HRManager.java
 class HRManager extends Employee {
-    public HRManager(String name, double salary) {
-        super(name, salary);
+    public HRManager(double salary) {
+        super(salary);
     }
 
     @Override
     public void work() {
-        System.out.println("HR Manager " + getName() + " is managing employees.");
+        System.out.println("HR Manager is managing human resources...");
     }
 
     public void addEmployee(Employee employee) {
-        System.out.println("Added employee " + employee.getName());
+        System.out.println("Adding new employee: " + employee.getSalary());
     }
+}
 
-    public String getName() {
-        return super.getClass().getSimpleName();
+public class Four {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Employee Management System!");
+        System.out.println("-----------------------------------------");
+
+        System.out.print("Enter the salary of the employee: ");
+        double employeeSalary = scanner.nextDouble();
+        Employee employee = new Employee(employeeSalary);
+
+        System.out.println("Employee is working...");
+        System.out.println("Salary: " + employee.getSalary());
+
+        System.out.print("Enter the salary of the HR Manager: ");
+        double hrManagerSalary = scanner.nextDouble();
+        HRManager hrManager = new HRManager(hrManagerSalary);
+
+        System.out.println("HR Manager is managing human resources...");
+        System.out.println("Salary: " + hrManager.getSalary());
+
+        System.out.print("Do you want to add the employee to the HR Manager's team? (yes/no): ");
+        String response = scanner.next();
+        if (response.equalsIgnoreCase("yes")) {
+            hrManager.addEmployee(employee);
+        } else {
+            System.out.println("Employee not added to the HR Manager's team.");
+        }
     }
 }
