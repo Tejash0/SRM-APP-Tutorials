@@ -16,6 +16,7 @@ public class Three {
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
+        scanner.close();
         return numbers;
     }
 
