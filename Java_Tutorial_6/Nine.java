@@ -1,9 +1,10 @@
+
 import ar.Addition;
 import ar.Subtraction;
 import ar.Multiplication;
 import ar.Division;
 
-public class Main {
+public class Nine {
     public static void main(String[] args) {
         Addition addition = new Addition();
         Subtraction subtraction = new Subtraction();
