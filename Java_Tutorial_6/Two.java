@@ -26,8 +26,7 @@ public class Two {
         TrafficLight trafficLight = new TrafficLight(initialColor);
 
         while (true) {
-            System.out.println("\nTraffic Light Simulator Menu");
-            System.out.println("-------------------------------");
+            System.out.println("\nTraffic Light Menu");
             System.out.println("1. Check current color");
             System.out.println("2. Change color");
             System.out.println("3. Exit");
