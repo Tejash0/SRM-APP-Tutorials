@@ -50,6 +50,7 @@ public class Two {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
+            scanner.close();
         }
     }
 }

@@ -60,5 +60,6 @@ public class Four {
         } else {
             System.out.println("Employee not added to the HR Manager's team.");
         }
+        scanner.close();
     }
 }

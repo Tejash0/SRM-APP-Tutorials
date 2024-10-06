@@ -119,6 +119,7 @@ public class Eight {
                 System.out.println("You have chosen to fly the " + vehicle.getClass().getSimpleName() + ".");
                 vehicle.fly_obj();
             }
+            scanner.close();
         }
     }
 }

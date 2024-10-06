@@ -49,5 +49,6 @@ public class One {
         for (int i = 0; i < numPeople; i++) {
             System.out.println("Name: " + people[i].getName() + ", Age: " + people[i].getAge());
         }
+        scanner.close();
     }
 }

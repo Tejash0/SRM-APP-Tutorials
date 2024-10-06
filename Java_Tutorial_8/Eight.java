@@ -15,6 +15,7 @@ public class Eight {
         UserThreadPriority threadobj2 = new UserThreadPriority(k, c);
         threadobj2.setName("ThreadB");
         threadobj2.start();
+        scanner.close();
     }
 }
 
