@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "InsertProduct",
+            "request": "launch",
+            "mainClass": "InsertProduct",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ArithmeticOperations",
+            "request": "launch",
+            "mainClass": "ArithmeticOperations",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Eight",
+            "request": "launch",
+            "mainClass": "Eight",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Five",
+            "request": "launch",
+            "mainClass": "Five",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Four",
+            "request": "launch",
+            "mainClass": "Four",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Nine",
+            "request": "launch",
+            "mainClass": "Nine",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "One",
+            "request": "launch",
+            "mainClass": "One",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Seven",
+            "request": "launch",
+            "mainClass": "Seven",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Six",
+            "request": "launch",
+            "mainClass": "Six",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "SortTest",
+            "request": "launch",
+            "mainClass": "SortTest",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Ten",
+            "request": "launch",
+            "mainClass": "Ten",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Three",
+            "request": "launch",
+            "mainClass": "Three",
+            "projectName": "Programs_e6229408"
+        },
+        {
+            "type": "java",
+            "name": "Two",
+            "request": "launch",
+            "mainClass": "Two",
+            "projectName": "Programs_e6229408"
+        }
+    ]
+}

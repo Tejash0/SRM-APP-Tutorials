@@ -1,36 +1,42 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Three {
     public static void main(String[] args) {
-        try {
-            // Replace with your database URL, username, and password
-            String url = "jdbc:mysql://localhost:3306/database1";
-            String username = "root";
-            String password = "";
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/database1"; // Replace with your DB name
+        String username = "root"; // Replace with your DB username
+        String password = ""; // Replace with your DB password
 
-            // Establish a connection to the database
+        // SQL Insert Query
+        String insertQuery = "INSERT INTO products (name, price, quantity) VALUES (?, ?, ?)";
+
+        try {
+            // 1. Establishing a connection
             Connection connection = DriverManager.getConnection(url, username, password);
 
-            // Create a prepared statement with placeholders
-            String insertQuery = "INSERT INTO products (product_id, product_name, price) VALUES (?, ?, ?)";
+            // 2. Creating a PreparedStatement
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
 
-            // Set values for the placeholders
-            preparedStatement.setInt(1, 101);
-            preparedStatement.setString(2, "Laptop");
-            preparedStatement.setDouble(3, 999.99);
+            // 3. Setting the values for the placeholders (?)
+            preparedStatement.setString(1, "Laptop"); // Name
+            preparedStatement.setDouble(2, 999.99); // Price
+            preparedStatement.setInt(3, 5); // Quantity
 
-            // Execute the insert statement
+            // 4. Executing the update
             int rowsInserted = preparedStatement.executeUpdate();
+
+            // 5. Check if the insertion was successful
             if (rowsInserted > 0) {
-                System.out.println("New record inserted successfully.");
-            } else {
-                System.out.println("Failed to insert new record.");
+                System.out.println("A new product was inserted successfully!");
             }
 
-            // Close the resources
+            // 6. Closing the connection
             preparedStatement.close();
             connection.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
